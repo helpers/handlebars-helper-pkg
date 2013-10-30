@@ -1,0 +1,35 @@
+{
+  "name": "handlebars-helper-pkg",
+  "description": "{{pkg}} handlebars helper, for returning the value of a property from package.json.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/helpers/handlebars-helper-pkg",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/helpers"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helpers/handlebars-helper-pkg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/helpers/handlebars-helper-pkg/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/helpers/handlebars-helper-pkg/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "./index.js",
+  "dependencies": {
+    "lodash": "~2.2.1"
+  },
+  "keywords": [
+    "assemble",
+    "handlebars helper",
+    "handlebars",
+    "helper",
+    "package.json",
+    "pkg"
+  ]
+}
