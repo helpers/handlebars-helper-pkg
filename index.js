@@ -15,9 +15,10 @@ var _ = require('lodash');
 var config = require(path.resolve(process.cwd(), 'package.json'));
 
 // Export helpers
-module.exports.register = function (Handlebars, options) {
-
+module.exports = function (assemble) {
   'use strict';
+  var helpers = {};
+  var options = assemble.config;
 
   /**
    * {{pkg}}
@@ -25,15 +26,10 @@ module.exports.register = function (Handlebars, options) {
    * @param  {String} key
    * @return {String}
    */
-  exports.pkg = function(key) {
-    options = _.defaults(options, config);
-    return options[key] || '';
+  helpers.pkg = function(key) {
+    var opts = _.defaults(options, config);
+    return opts[key] || '';
   };
 
-
-  for (var helper in exports) {
-    if (exports.hasOwnProperty(helper)) {
-      Handlebars.registerHelper(helper, exports[helper]);
-    }
-  }
+  return helpers;
 };
